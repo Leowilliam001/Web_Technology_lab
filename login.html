@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Login page</h1>
+    </head>
+    <body>
+
+        <form id="login-form" name="validation">
+        
+            Username :<input type="text" id="username"><br> <br>
+            Password :<input type="password" id="password"><br><br>
+            <span id="error-message" class="error-message"></span>
+            
+            <br><br>
+        
+            <button type="submit">Login</button>
+        </form>        
+
+        <script>
+            document.getElementById("login-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+                const errorMessage = document.getElementById("error-message");
+    
+                if (username.length < 5 || username.length > 30) {
+                    errorMessage.textContent = "Username must be between 5 and 20 characters.";
+                } else if (!isValidPassword(password)) {
+                    errorMessage.textContent = "Password must contain at least one lowercase letter, one uppercase letter, one number, one special character, and be at least 8 characters long.";
+                } else {
+                    errorMessage.textContent = "";
+                    
+                    alert(`You have Logged in \nUsername: ${username}\nPassword: ${password}`);
+                }
+            });
+    
+            function isValidPassword(password) {
+                const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-+.]).{8,}$/;
+                return regex.test(password);
+            }
+        </script>
+
+    </body>
+</html>

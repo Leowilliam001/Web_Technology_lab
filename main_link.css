@@ -12,3 +12,15 @@ p{
   display: block;
   text-align: left;
 }
+
+body{
+  color: white;
+}
+
+.red-button{
+  background-color: red;
+  color: white;
+  text-align: right;
+  margin: auto;
+  display: flex;
+}
