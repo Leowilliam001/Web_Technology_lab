@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aniworld>
+    <anime>
+        <name>Horimiya</name>
+        <genre>Romance</genre>
+        <IMDb>8.2</IMDb>
+        <language>Japanese</language>
+    </anime>
+    <anime>
+        <name>Tokyo Revengers</name>
+        <genre>Action</genre>
+        <IMDb>8.6</IMDb>
+        <language>Japanese</language>
+    </anime>
+    <anime>
+        <name>Naruto</name>
+        <genre>Adventure</genre>
+        <IMDb>8.5</IMDb>
+        <language>Japanese</language>
+    </anime>
+   
+</aniworld>
