@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Marklist</h1><hr>    
+    <!--Invoke marklist1 servlet to display all the students' marks-->
+    <a href="http://localhost:8080/MyServlets/db13">Select all the info here!!</a>
+    <hr>
+    <!-- On submit invoke marklist2 servlet to display mark details of specific dept students-->
+    <h3>View Department Specific Mark Details</h3>
+    <form action="http://localhost:8080/MyServlets/db13b">
+        <!--Drop down selection-->
+        <label for="course">Recommended Genre</label>
+        <select id="course" name="course">
+        <option value="empty">--</option>
+        <option value="FanId">Romance</option>
+        <option value="Name">Adventure</option>
+        <option value="Age">Action</option>
+        <option value="Favourite_Anime">Sci-Fi</option>
+        <option value="Recommended_Genre">Fantasy</option>
+        <br>
+        <br>
+        <input type="submit" value="SUBMIT"/>
+    </form>
+    <h2>Insert Data into DB</h2>
+    <form action="http://localhost:8080/MyServlets/db13c">
+        <p>Fan ID:</p> 
+        <!-- Create an element with mandatory name attribute,
+        so that data can be transfer to the servlet using getParameter() -->
+        <input type="number" name="FanId"/>
+        <p>Name:</p> 
+        <input type="text" name="Name"/>
+        <p>Age:</p> 
+        <input type="number" name="Age"/>
+        <p>AFavourite Anime:</p>
+        <input type="text" name="Favourite_Anime"/>
+        <p>Recommended Genre:</p> 
+        <input type="text" name="Recommended_Genre"/>
+        </form>
+        </br></br>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+</html>
